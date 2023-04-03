@@ -33,7 +33,7 @@ final class LoginViewController: UIViewController {
         performSegue(withIdentifier: "goToWelcomeVC", sender: nil)
     }
     
-    // сделать тернарный оператор
+    // сделать тернарный оператор из видео
     @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
         showAlert(tittle: "Oops!", message: "Your name is \(user) 👨🏼‍💻")
     }
