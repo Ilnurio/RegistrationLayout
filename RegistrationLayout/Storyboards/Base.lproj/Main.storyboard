@@ -56,17 +56,17 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotUserNameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dry-Ay-Mpd"/>
+                                            <action selector="forgotRegisterDataTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mc-Ei-6dF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dre-o7-Vxm">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dre-o7-Vxm">
                                         <rect key="frame" x="130" y="0.0" width="130" height="27.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="forgotPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7r-I3-QBQ"/>
+                                            <action selector="forgotRegisterDataTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqS-ru-PDw"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -107,7 +107,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                 <connections>
-                                    <segue destination="bwd-bq-pqv" kind="unwind" unwindAction="unwindSegueToWelcomeVCFor:" id="vrh-eZ-hQJ"/>
+                                    <segue destination="bwd-bq-pqv" kind="unwind" unwindAction="unwindFor:" id="oFq-NN-bEg"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ZwP-Cp-K8K">

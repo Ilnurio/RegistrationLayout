@@ -20,26 +20,24 @@ final class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = user
     }
-
+    
     @IBAction func logInButtonTapped() {
-        guard let userName = userNameTF.text,
-              let password = passwordTF.text else { return }
-        if userName != user || password != password {
-                showAlert(
-                    tittle: "Name or password are wrong",
-                    message: "Please, try again"
-                )
-            }
+        guard userNameTF.text == user,
+              passwordTF.text == password else {
+            showAlert(
+                title: "Name or password are wrong",
+                message: "Please, try again",
+                textField: passwordTF
+            )
+            return
+        }
         performSegue(withIdentifier: "goToWelcomeVC", sender: nil)
     }
     
-    // сделать тернарный оператор из видео
-    @IBAction func forgotUserNameButtonTapped(_ sender: UIButton) {
-        showAlert(tittle: "Oops!", message: "Your name is \(user) 👨🏼‍💻")
-    }
-    
-    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        showAlert(tittle: "Oops!", message: "Your password is \(password) ⌨️")
+    @IBAction func forgotRegisterDataTapped(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your name is \(user) 👨🏼‍💻")
+        : showAlert(title: "Oops!", message: "Your password is \(password) ⌨️")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue){
@@ -50,15 +48,17 @@ final class LoginViewController: UIViewController {
 
 // MARK: - extensionOne - showAllert
 extension LoginViewController {
-    private func showAlert(tittle: String, message: String) {
-        let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
 
- // MARK: - extensionTwo - touchesBegan
+// MARK: - extensionTwo - touchesBegan
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
