@@ -9,6 +9,8 @@ import UIKit
 
 class BioViewController: UIViewController {
 
+    @IBOutlet weak var biographyLabel: UILabel!
+    
     private let primaryColor = UIColor(
         red: 210/255,
         green: 109/255,

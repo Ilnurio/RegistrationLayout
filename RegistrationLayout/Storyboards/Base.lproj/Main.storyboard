@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="36F-4P-RL1">
                                 <rect key="frame" x="30" y="150" width="260" height="132.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Alexey" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iLD-aI-y7O">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iLD-aI-y7O">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
@@ -28,7 +28,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="SXX-E4-rfb"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bG7-Ry-k4Z">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bG7-Ry-k4Z">
                                         <rect key="frame" x="0.0" y="49" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
@@ -159,6 +159,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="OPw-M5-u0V"/>
                     <navigationItem key="navigationItem" id="i1v-2G-ygh"/>
                     <connections>
+                        <outlet property="myName" destination="sjE-2B-scl" id="3Fj-1j-UX5"/>
                         <outlet property="userNameLabel" destination="VVm-hE-XgO" id="0eK-Hk-7VM"/>
                     </connections>
                 </viewController>
@@ -252,6 +253,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="companyLabel" destination="zbd-Ec-S3k" id="OCt-3O-HXg"/>
+                        <outlet property="departmentLabel" destination="lYs-RQ-KrD" id="2cP-FG-mEz"/>
+                        <outlet property="nameSurNameLabel" destination="GE9-yB-ryj" id="J1F-ta-8qX"/>
+                        <outlet property="positionLabel" destination="NAm-Oo-NUX" id="NVc-hx-3sb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wZ-DH-T06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,6 +288,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YYg-HU-p98"/>
+                    <connections>
+                        <outlet property="biographyLabel" destination="HXG-af-En6" id="ogi-aW-PwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3S-qn-4Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

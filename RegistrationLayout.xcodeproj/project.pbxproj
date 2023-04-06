@@ -17,7 +17,6 @@
 		4667879429DA12600084F2B3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667879329DA12600084F2B3 /* WelcomeViewController.swift */; };
 		46E7508229DE026D0005DE4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7508129DE026D0005DE4B /* User.swift */; };
 		46E7508429DE08950005DE4B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7508329DE08950005DE4B /* UserViewController.swift */; };
-		46E7508629DE0D880005DE4B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E7508529DE0D880005DE4B /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		4667879329DA12600084F2B3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		46E7508129DE026D0005DE4B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		46E7508329DE08950005DE4B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		46E7508529DE0D880005DE4B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				4667878329DA05570084F2B3 /* LoginViewController.swift */,
-				46E7508529DE0D880005DE4B /* TabBarController.swift */,
 				4667879329DA12600084F2B3 /* WelcomeViewController.swift */,
 				46E7508329DE08950005DE4B /* UserViewController.swift */,
 				4645A34E29DE180800ACA173 /* BioViewController.swift */,
@@ -190,7 +187,6 @@
 				4667878429DA05570084F2B3 /* LoginViewController.swift in Sources */,
 				4645A34F29DE180800ACA173 /* BioViewController.swift in Sources */,
 				4667878029DA05570084F2B3 /* AppDelegate.swift in Sources */,
-				46E7508629DE0D880005DE4B /* TabBarController.swift in Sources */,
 				46E7508229DE026D0005DE4B /* User.swift in Sources */,
 				4667878229DA05570084F2B3 /* SceneDelegate.swift in Sources */,
 			);

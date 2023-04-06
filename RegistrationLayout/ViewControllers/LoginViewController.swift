@@ -13,12 +13,29 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private let userID = User.getUserData()
+    
     private let user = "Alexey"
     private let password = "Password"
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if viewController is WelcomeViewController {
+                userNameTF.text = user
+            }
+            
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        userNameTF.text = "Alexey"
+        passwordTF.text = "Password"
     }
     
     @IBAction func logInButtonTapped() {

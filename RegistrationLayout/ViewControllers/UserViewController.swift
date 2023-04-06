@@ -9,6 +9,11 @@ import UIKit
 
 final class UserViewController: UIViewController {
 
+    @IBOutlet weak var nameSurNameLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var departmentLabel: UILabel!
+    
     private let primaryColor = UIColor(
         red: 210/255,
         green: 109/255,
