@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		462F615D29DEBBF70043A7CC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462F615C29DEBBF70043A7CC /* TabBarController.swift */; };
 		4645A34F29DE180800ACA173 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645A34E29DE180800ACA173 /* BioViewController.swift */; };
 		4667878029DA05570084F2B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667877F29DA05570084F2B3 /* AppDelegate.swift */; };
 		4667878229DA05570084F2B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667878129DA05570084F2B3 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		462F615C29DEBBF70043A7CC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4645A34E29DE180800ACA173 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		4667877C29DA05570084F2B3 /* RegistrationLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4667877F29DA05570084F2B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4667878329DA05570084F2B3 /* LoginViewController.swift */,
+				462F615C29DEBBF70043A7CC /* TabBarController.swift */,
 				4667879329DA12600084F2B3 /* WelcomeViewController.swift */,
 				46E7508329DE08950005DE4B /* UserViewController.swift */,
 				4645A34E29DE180800ACA173 /* BioViewController.swift */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4667879429DA12600084F2B3 /* WelcomeViewController.swift in Sources */,
+				462F615D29DEBBF70043A7CC /* TabBarController.swift in Sources */,
 				46E7508429DE08950005DE4B /* UserViewController.swift in Sources */,
 				4667878429DA05570084F2B3 /* LoginViewController.swift in Sources */,
 				4645A34F29DE180800ACA173 /* BioViewController.swift in Sources */,

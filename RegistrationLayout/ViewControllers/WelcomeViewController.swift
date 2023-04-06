@@ -11,9 +11,10 @@ final class WelcomeViewController: UIViewController {
 
     
     @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet weak var myName: UILabel!
+    @IBOutlet weak var myNameLabel: UILabel!
     
     var userName: String!
+    var myName: String!
     
     private let primaryColor = UIColor(
         red: 210/255,
@@ -34,6 +35,7 @@ final class WelcomeViewController: UIViewController {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         userNameLabel.text = userName
+        myNameLabel.text = myName
     }
 }
 

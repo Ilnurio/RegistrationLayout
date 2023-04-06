@@ -24,10 +24,16 @@ final class LoginViewController: UIViewController {
         guard let viewControllers = tabBarController.viewControllers else { return }
         
         viewControllers.forEach { viewController in
-            if viewController is WelcomeViewController {
-                userNameTF.text = user
-            }
-            
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = userID.login
+                welcomeVC.myName = userID.person.nameAndSurname
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
+                userVC.nameSurName = userID.person.nameAndSurname
+                userVC.company = userID.person.company
+                userVC.position = userID.person.position
+                userVC.department = userID.person.department
+            } 
         }
     }
     

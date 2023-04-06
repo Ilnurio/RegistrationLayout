@@ -14,6 +14,11 @@ final class UserViewController: UIViewController {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var departmentLabel: UILabel!
     
+    var nameSurName: String!
+    var company: String!
+    var position: String!
+    var department: String!
+    
     private let primaryColor = UIColor(
         red: 210/255,
         green: 109/255,
@@ -31,5 +36,10 @@ final class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
+        nameSurNameLabel.text = nameSurName
+        companyLabel.text = company
+        positionLabel.text = position
+        departmentLabel.text = department
     }
 }
