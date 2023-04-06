@@ -32,7 +32,13 @@ final class UserViewController: UIViewController {
         blue: 230/255,
         alpha: 1
     )
-
+    
+    private let bioInfo = User.getUserData().person.aboutMe
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.biography = bioInfo
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)

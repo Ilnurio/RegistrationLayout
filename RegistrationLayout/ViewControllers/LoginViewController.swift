@@ -30,7 +30,6 @@ final class LoginViewController: UIViewController {
                 userVC.position = userID.person.position
                 userVC.department = userID.person.department
             }
-            
         }
     }
     
