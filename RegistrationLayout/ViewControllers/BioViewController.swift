@@ -11,6 +11,8 @@ class BioViewController: UIViewController {
 
     @IBOutlet weak var biographyLabel: UILabel!
     
+    var biography: String!
+    
     private let primaryColor = UIColor(
         red: 210/255,
         green: 109/255,
@@ -28,6 +30,8 @@ class BioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
+        biographyLabel.text = biography
     }
 }
 

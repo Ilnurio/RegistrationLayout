@@ -15,10 +15,6 @@ final class LoginViewController: UIViewController {
     
     private let userID = User.getUserData()
     
-    private let user = "Alexey"
-    private let password = "Password"
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
@@ -33,20 +29,21 @@ final class LoginViewController: UIViewController {
                 userVC.company = userID.person.company
                 userVC.position = userID.person.position
                 userVC.department = userID.person.department
-            } 
+            }
+            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameTF.text = "Alexey"
-        passwordTF.text = "Password"
+        userNameTF.text = userID.login
+        passwordTF.text = userID.password
     }
     
     @IBAction func logInButtonTapped() {
-        guard userNameTF.text == user,
-              passwordTF.text == password else {
+        guard userNameTF.text == userID.login,
+              passwordTF.text == userID.password else {
             showAlert(
                 title: "Name or password are wrong",
                 message: "Please, try again",
@@ -59,8 +56,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterDataTapped(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user) 👨🏼‍💻")
-        : showAlert(title: "Oops!", message: "Your password is \(password) ⌨️")
+        ? showAlert(title: "Oops!", message: "Your name is \(userID.login) 👨🏼‍💻")
+        : showAlert(title: "Oops!", message: "Your password is \(userID.password) ⌨️")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue){
